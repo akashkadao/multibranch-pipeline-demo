@@ -60,7 +60,7 @@ pipeline {
                 """
 
                 sh """
-                echo "Deploying Code"
+                echo "Deploying Code manually as well as automatically"
                 """
             }
         }
