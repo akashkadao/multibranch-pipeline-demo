@@ -64,13 +64,5 @@ pipeline {
                 """
             }
         }
-        stage('tagging'){
-            steps {
-                VERSION_NUMBER = VersionNumber(versioNumberString: '1.2.1.${BUILDS_ALL_TIME}')
-                currentBuild.displayName = "${VERSION_NUMBER}"
-                sh "ant -Dversion=${VERSION_NUMBER} build"
-            }
-        }
-
     }   
 }
