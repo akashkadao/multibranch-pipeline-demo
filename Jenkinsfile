@@ -64,5 +64,10 @@ pipeline {
                 """
             }
         }
+        stage('build number'){
+            steps{
+                sh("git tag ${BUILD_NUMBER}")
+            }
+        }            
     }   
 }
