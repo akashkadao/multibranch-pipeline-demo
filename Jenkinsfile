@@ -12,11 +12,18 @@ pipeline {
             }
         }
         stage('Deploy') {
-            when { tag "release-*" }
             steps {
                 echo 'Deploying only because this commit is tagged...'
                 sh 'make deploy'
             }
         }
+        Stage('git tags') {
+            steps {
+                sh '''
+                    git tag -a v3.1 -m 'this is for release version'
+                    git tags -l
+                    git push origin v3.1'''
+            }
+        }        
     }
 }
