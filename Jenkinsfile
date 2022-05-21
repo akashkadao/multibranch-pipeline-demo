@@ -21,8 +21,9 @@ pipeline {
             steps {
                 sh '''
                     git tag -a v3.1 -m 'this is for release version'
-                    git tags -l
-                    git push origin v3.1'''
+                    git tag -l
+                    git push origin v3.1
+                    '''
             }
         }        
     }
