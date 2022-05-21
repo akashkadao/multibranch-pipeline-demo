@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
-                git clone
+                git credentialsId: 'git_url', url: 'https://github.com/akashkadao/multibranch-pipeline-demo.git'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'echo package'
