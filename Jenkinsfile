@@ -20,9 +20,9 @@ pipeline {
         stage('git tags') {
             steps {
                 sh '''
-                    git tag -a vf.1 -m 'this is for release version'
+                    git tag -a vo.1 -m 'this is for release version'
                     git tag -l
-                    git push origin vf.1
+                    git push origin vo.1
                     '''
             }
         }        
