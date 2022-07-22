@@ -27,7 +27,7 @@ pipeline {
                 sh '''
                     git tag -a vo.1 -m 'this is for release version'
                     git tag -l
-                    git push origin vo.1
+                    git push origin ${BUILD_NUMBER}
                     '''
             }
         }        
