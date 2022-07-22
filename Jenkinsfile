@@ -25,7 +25,7 @@ pipeline {
         stage('git tags') {
             steps {
                 sh '''
-                    git tag -a vo.1 -m 'this is for release version'
+                    git tag -a ${BUILD_NUMBER} -m 'this is for release version'
                     git tag -l
                     git push origin ${BUILD_NUMBER}
                     '''
